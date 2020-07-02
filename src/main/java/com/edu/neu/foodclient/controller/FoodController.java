@@ -1,8 +1,8 @@
-package com.edu.neu.foodcilent.controller;
+package com.edu.neu.foodclient.controller;
 
 import com.github.pagehelper.PageInfo;
-import com.edu.neu.foodcilent.entity.Food;
-import com.edu.neu.foodcilent.service.FoodService;
+import com.edu.neu.foodclient.entity.Food;
+import com.edu.neu.foodclient.service.FoodService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
@@ -31,6 +31,7 @@ public class FoodController {
      */
     @RequestMapping("/getAll")
     public List<Food> getAll(){
+        System.out.println(1);
         return foodService.getAll();
     }
 
@@ -93,5 +94,9 @@ public class FoodController {
             e.printStackTrace();
         }
         return 0;
+    }
+    @RequestMapping("/getFoodByFid")
+    public Food getFoodByFid(@RequestParam("fid") int fid){
+        return foodService.getFoodByFid(fid);
     }
 }

@@ -1,6 +1,6 @@
-package com.edu.neu.foodcilent.config;
+package com.edu.neu.foodclient.config;
 
-import com.edu.neu.foodcilent.filter.CrosFilter;
+import com.edu.neu.foodclient.filter.CrosFilter;
 import listener.AppListener;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.boot.web.servlet.ServletListenerRegistrationBean;

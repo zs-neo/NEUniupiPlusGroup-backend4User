@@ -1,4 +1,4 @@
-package com.edu.neu.foodcilent.entity;
+package com.edu.neu.foodclient.entity;
 
 import java.util.List;
 

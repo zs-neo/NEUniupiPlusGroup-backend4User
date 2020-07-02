@@ -1,10 +1,10 @@
-package com.edu.neu.foodcilent.service.impl;
+package com.edu.neu.foodclient.service.impl;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.edu.neu.foodcilent.entity.Food;
-import com.edu.neu.foodcilent.mapper.FoodMapper;
-import com.edu.neu.foodcilent.service.FoodService;
+import com.edu.neu.foodclient.entity.Food;
+import com.edu.neu.foodclient.mapper.FoodMapper;
+import com.edu.neu.foodclient.service.FoodService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -39,6 +39,11 @@ public class FoodServiceImpl implements FoodService {
         PageInfo<Food> pageInfo = new PageInfo<Food>(foodMapper.getFoodBySecondType(stid));
 
         return pageInfo;
+    }
+
+    @Override
+    public Food getFoodByFid(int fid) {
+        return foodMapper.getFoodByFid(fid);
     }
 
 

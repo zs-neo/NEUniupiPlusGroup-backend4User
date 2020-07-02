@@ -1,8 +1,8 @@
-package com.edu.neu.foodcilent.controller;
+package com.edu.neu.foodclient.controller;
 
-import com.edu.neu.foodcilent.entity.FirstType;
-import com.edu.neu.foodcilent.entity.SecondType;
-import com.edu.neu.foodcilent.service.FoodTypeService;
+import com.edu.neu.foodclient.entity.FirstType;
+import com.edu.neu.foodclient.entity.SecondType;
+import com.edu.neu.foodclient.service.FoodTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;

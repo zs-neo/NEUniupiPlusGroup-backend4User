@@ -1,9 +1,9 @@
-package com.edu.neu.foodcilent.service.impl;
+package com.edu.neu.foodclient.service.impl;
 
-import com.edu.neu.foodcilent.entity.FirstType;
-import com.edu.neu.foodcilent.entity.SecondType;
-import com.edu.neu.foodcilent.mapper.FoodTypeMapper;
-import com.edu.neu.foodcilent.service.FoodTypeService;
+import com.edu.neu.foodclient.entity.FirstType;
+import com.edu.neu.foodclient.entity.SecondType;
+import com.edu.neu.foodclient.mapper.FoodTypeMapper;
+import com.edu.neu.foodclient.service.FoodTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

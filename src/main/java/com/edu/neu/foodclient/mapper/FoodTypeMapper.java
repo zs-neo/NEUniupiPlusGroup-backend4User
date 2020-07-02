@@ -1,7 +1,7 @@
-package com.edu.neu.foodcilent.mapper;
+package com.edu.neu.foodclient.mapper;
 
-import com.edu.neu.foodcilent.entity.FirstType;
-import com.edu.neu.foodcilent.entity.SecondType;
+import com.edu.neu.foodclient.entity.FirstType;
+import com.edu.neu.foodclient.entity.SecondType;
 import org.apache.ibatis.annotations.*;
 import java.util.List;
 
@@ -18,7 +18,7 @@ public interface FoodTypeMapper {
     @Results({
             @Result(id=true,column = "ftid",property = "ftid"),
             @Result(column = "ftid",property = "secondTypeList", javaType = List.class,
-                    many = @Many(select = "com.neu.edu.foodshop.mapper.FoodTypeMapper.getSecondTypeByFtid"))
+                    many = @Many(select = "com.edu.neu.foodclient.mapper.FoodTypeMapper.getSecondTypeByFtid"))
 
     })
     List<FirstType> getFirstTypeWithSecondType();

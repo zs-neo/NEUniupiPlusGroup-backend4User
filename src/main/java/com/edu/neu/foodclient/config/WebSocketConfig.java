@@ -1,4 +1,4 @@
-package com.edu.neu.foodcilent.config;
+package com.edu.neu.foodclient.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

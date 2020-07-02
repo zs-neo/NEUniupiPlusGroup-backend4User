@@ -1,6 +1,6 @@
-package com.edu.neu.foodcilent.mapper;
+package com.edu.neu.foodclient.mapper;
 
-import com.edu.neu.foodcilent.entity.Food;
+import com.edu.neu.foodclient.entity.Food;
 import org.apache.ibatis.annotations.*;
 import java.util.List;
 
@@ -17,4 +17,7 @@ public interface FoodMapper {
     //模糊查询
     @Select("select * from foods where instr(fname,#{fname})>0")
     List<Food> getFoodByName(String fname);
+
+    @Select("select * from foods where fid=#{fid}")
+    Food getFoodByFid(int fid);
 }

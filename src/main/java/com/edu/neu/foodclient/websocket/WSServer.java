@@ -1,4 +1,4 @@
-package com.edu.neu.foodcilent.websocket;
+package com.edu.neu.foodclient.websocket;
 
 import org.springframework.stereotype.Component;
 

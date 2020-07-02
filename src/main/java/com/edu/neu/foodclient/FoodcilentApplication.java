@@ -1,4 +1,4 @@
-package com.edu.neu.foodcilent;
+package com.edu.neu.foodclient;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
