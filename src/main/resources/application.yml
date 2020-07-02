@@ -1,5 +1,6 @@
-upload:
-  path: D:/static/
+lc:
+  upload:
+    path: D:/static/
 server:
   port: 8082
   address: 127.0.0.1
@@ -12,7 +13,7 @@ spring:
     password: 123456
     driver-class-name: oracle.jdbc.driver.OracleDriver
   resources:
-    static-locations: classpath:/static/,file:${upload.path}
+    static-locations: classpath:/static/,file:${lc.upload.path}
   mvc:
     static-path-pattern: /res/**
 

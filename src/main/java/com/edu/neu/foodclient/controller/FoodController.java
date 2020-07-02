@@ -17,7 +17,7 @@ import java.util.UUID;
 @RequestMapping("/food")
 public class FoodController {
 
-    @Value("${upload.path}")
+    @Value("${lc.upload.path}")
     private String uploadPath;
 
     private String fileName;
@@ -34,7 +34,6 @@ public class FoodController {
         System.out.println(1);
         return foodService.getAll();
     }
-
     /**
      * 根据第二类别id获取美食苏剧
      * @param stid 第二类别id
