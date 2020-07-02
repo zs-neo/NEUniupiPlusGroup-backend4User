@@ -8,11 +8,11 @@
         <version>2.3.1.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.chinasoft</groupId>
-    <artifactId>demo</artifactId>
+    <groupId>edu.neu</groupId>
+    <artifactId>foodclient</artifactId>
     <version>1.0</version>
-    <name>demo</name>
-    <description>This is my first springboot project</description>
+    <name>foodclient</name>
+    <description>foodclient</description>
 
     <properties>
         <java.version>1.8</java.version>
