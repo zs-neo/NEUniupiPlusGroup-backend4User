@@ -5,7 +5,7 @@
 <mapper namespace="com.edu.neu.foodclient.mapper.LoginMapper">
 
     <select id="get" resultType="com.edu.neu.foodclient.entity.Client">
-    select * from client where username=#{username} and password=#{password}
-  </select>
+        select * from client where username=#{username} and password=#{password}
+    </select>
 
 </mapper>

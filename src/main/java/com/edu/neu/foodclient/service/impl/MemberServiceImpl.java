@@ -9,12 +9,13 @@ import com.edu.neu.foodclient.service.RedPacketService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 @Service
 public class MemberServiceImpl implements MemberService {
 
-    @Autowired
+    @Resource
     private MemberMapper memberMapper;
 
 

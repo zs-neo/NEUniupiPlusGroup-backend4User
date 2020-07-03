@@ -18,12 +18,21 @@ public class Client {
 	private String password;
 	private String wechat_id;
 	private String icon;
-	private long phone;
-	private Date createdate;
+	private String phone;
+	private String createdate;
+	private Member member;
 	private int type;
 	private int state;
 	private int scores;
-	
+
+	public Member getMember() {
+		return member;
+	}
+
+	public void setMember(Member member) {
+		this.member = member;
+	}
+
 	@Override
 	public String toString() {
 		return "Client{" +
@@ -34,12 +43,13 @@ public class Client {
 				", icon='" + icon + '\'' +
 				", phone='" + phone + '\'' +
 				", createdate='" + createdate + '\'' +
-				", type='" + type + '\'' +
-				", state='" + state + '\'' +
-				", scores='" + scores + '\'' +
+				", member=" + member +
+				", type=" + type +
+				", state=" + state +
+				", scores=" + scores +
 				'}';
 	}
-	
+
 	public int getClientid() {
 		return clientid;
 	}
@@ -80,19 +90,19 @@ public class Client {
 		this.icon = icon;
 	}
 	
-	public long getPhone() {
+	public String getPhone() {
 		return phone;
 	}
 	
-	public void setPhone(long phone) {
+	public void setPhone(String phone) {
 		this.phone = phone;
 	}
 	
-	public Date getCreatedate() {
+	public String getCreatedate() {
 		return createdate;
 	}
 	
-	public void setCreatedate(Date createdate) {
+	public void setCreatedate(String createdate) {
 		this.createdate = createdate;
 	}
 	

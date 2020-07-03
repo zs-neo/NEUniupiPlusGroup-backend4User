@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.Resource;
+
 /**
  * @author zhousheng
  * @version 1.0
@@ -22,7 +24,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/user")
 public class LoginController {
 	
-	@Autowired
+	@Resource
 	private LoginService loginService;
 	
 	@RequestMapping("/login")
@@ -30,7 +32,7 @@ public class LoginController {
 		System.out.println(username+password);
 		return loginService.login(username,password);
 	}
-	
+
 	@RequestMapping("/register")
 	public int register(@RequestBody Client client) {
 		return loginService.register(client);

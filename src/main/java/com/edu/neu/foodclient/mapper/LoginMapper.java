@@ -8,7 +8,6 @@ package com.edu.neu.foodclient.mapper;
 import com.edu.neu.foodclient.entity.Client;
 import org.apache.ibatis.annotations.Mapper;
 
-
 import java.util.List;
 
 /**
@@ -18,7 +17,7 @@ import java.util.List;
  */
 @Mapper
 public interface LoginMapper {
-	
+
 	/**
 	 * 条件查询用户通用接口
 	 *

@@ -17,7 +17,7 @@ import java.util.UUID;
 @RequestMapping("/food")
 public class FoodController {
 
-    @Value("${lc.upload.path}")
+    @Value("${upload.path}")
     private String uploadPath;
 
     private String fileName;
