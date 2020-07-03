@@ -8,7 +8,7 @@ public class Member {
     private  String identityid;
     private  String realname;
     private  String certificationdate;
-    private  int accumulatescores;
+    private  double accumulatescores;
     private  int scores;
 
     public Member() {
@@ -46,11 +46,11 @@ public class Member {
         this.certificationdate = certificationdate;
     }
 
-    public int getAccumulatescores() {
+    public double getAccumulatescores() {
         return accumulatescores;
     }
 
-    public void setAccumulatescores(int accumulatescores) {
+    public void setAccumulatescores(double accumulatescores) {
         this.accumulatescores = accumulatescores;
     }
 

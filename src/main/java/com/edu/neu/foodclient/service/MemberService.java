@@ -8,5 +8,5 @@ import java.util.List;
 public interface MemberService {
 
    Member getMember(int clientid);
-
+   int memberRegis(Member member);
 }

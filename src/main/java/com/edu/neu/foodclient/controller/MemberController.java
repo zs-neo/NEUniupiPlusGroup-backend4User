@@ -5,6 +5,7 @@ import com.edu.neu.foodclient.entity.RedPacket;
 import com.edu.neu.foodclient.service.MemberService;
 import com.edu.neu.foodclient.service.RedPacketService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -32,6 +33,19 @@ public class MemberController {
             }else{
                 map.put("getMember","fail");
             }
+        return map;
+    }
+
+    @RequestMapping("/memberRegis")
+    public Object memberRegis(@RequestBody Member member){
+        Map<String, Object> map = new HashMap<>();
+        int status = memberService.memberRegis(member);
+        if(status==1){
+            map.put("status", true);
+        }else{
+            map.put("status", false);
+            map.put("msg","系统错误");
+        }
         return map;
     }
 }
