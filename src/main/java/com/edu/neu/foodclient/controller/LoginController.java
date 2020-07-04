@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpSession;
 
 /**
  * @author zhousheng
@@ -28,9 +29,11 @@ public class LoginController {
 	private LoginService loginService;
 	
 	@RequestMapping("/login")
-	public Client login(String username, String password) {
+	public Client login(String username, String password, HttpSession session) {
 		System.out.println(username+password);
-		return loginService.login(username,password);
+		Client client = loginService.login(username, password);
+		session.setAttribute("user", client);
+		return client;
 	}
 
 	@RequestMapping("/register")
