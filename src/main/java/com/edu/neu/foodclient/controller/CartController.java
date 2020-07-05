@@ -36,8 +36,14 @@ public class CartController {
     }
 
     @RequestMapping("/deleteCartItems")
-    public int deleteCartItems(@RequestBody List<Cart> carts){
-        System.out.println(carts);
+    public int deleteCartItems(@RequestBody int[] carts){
+        for (int i=0;i<carts.length;i++){
+            System.out.println(carts[i]);
+            Cart cart=new Cart();
+            cart.setFid(carts[i]);
+            cartService.deleteCartItem(cart);
+        }
+        System.out.println(carts.length);
         return 0;
     }
     @RequestMapping("/deleteCartItem")
@@ -45,6 +51,21 @@ public class CartController {
         System.out.println(cart);
         cartService.deleteCartItem(cart);
         return 0;
+    }
+    @RequestMapping("/getCartsByFids")
+    public List<Cart> getCartsByFids(@RequestBody int[] idList){
+
+        return cartService.getCartsByFids(idList);
+    }
+    @RequestMapping("/updataCart")
+    public int updataCart(@RequestParam("fnum") int fnum,@RequestParam("fid") int fid){
+        System.out.println(fnum);
+        System.out.println(fid);
+        Cart cart = new Cart();
+        cart.setFid(fid);
+        cart.setFnum(fnum);
+        cartService.updateCart(cart);
+        return 1;
     }
 
 }

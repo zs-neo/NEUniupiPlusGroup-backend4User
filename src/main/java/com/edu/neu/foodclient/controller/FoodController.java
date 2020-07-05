@@ -98,4 +98,9 @@ public class FoodController {
     public Food getFoodByFid(@RequestParam("fid") int fid){
         return foodService.getFoodByFid(fid);
     }
+
+    @RequestMapping("/getRecommendFood")
+    public List<Food> getRecommendFood(){
+        return foodService.getRecommendFood();
+    }
 }

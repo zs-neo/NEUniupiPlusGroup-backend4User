@@ -29,5 +29,13 @@ public interface CartMapper {
     @Select("select * from cart")
     List<Cart> getCarts();
 
+    @Select({"<script>",
+            "select * from cart WHERE fid IN",
+            "<foreach collection='idList' item='item' index='index' open='(' separator=',' close=')'>",
+            "#{item}",
+            "</foreach>", 
+            "</script>"})
+    List<Cart> getCartsByFids(int[] idList);
+
 
 }

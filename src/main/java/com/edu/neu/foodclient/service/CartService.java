@@ -17,5 +17,6 @@ public interface CartService {
     int getCartTypeNum();
     int updateCart(Cart cart);
     List<Cart> getCarts();
+    List<Cart> getCartsByFids(int[] idList);
 
 }

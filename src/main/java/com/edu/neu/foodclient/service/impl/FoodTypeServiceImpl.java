@@ -28,4 +28,9 @@ public class FoodTypeServiceImpl implements FoodTypeService {
         return foodTypeMapper.getSecondTypeByFtid(ftid);
     }
 
+    @Override
+    public SecondType getSecondTypeByStid(int stid) {
+        return foodTypeMapper.getSecondTypeByStid(stid);
+    }
+
 }

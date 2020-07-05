@@ -57,4 +57,9 @@ public class CartServiceImpl implements CartService {
         return mapper.getCarts();
     }
 
+    @Override
+    public List<Cart> getCartsByFids(int[] idList) {
+        return mapper.getCartsByFids(idList);
+    }
+
 }
