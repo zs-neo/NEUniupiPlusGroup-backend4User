@@ -13,7 +13,7 @@ import java.util.Date;
  */
 public class Client {
 	
-	private Integer clientid;
+	private int clientid;
 	private String username;
 	private String password;
 	private String wechat_id;
@@ -21,9 +21,9 @@ public class Client {
 	private String phone;
 	private String createdate;
 	private Member member;
-	private Integer type;
-	private Integer state;
-	private Double scores;
+	private int type;
+	private int state;
+	private double scores;
 
 	public Member getMember() {
 		return member;
@@ -50,83 +50,83 @@ public class Client {
 				'}';
 	}
 
-	public Integer getClientid() {
+	public int getClientid() {
 		return clientid;
 	}
-
-	public void setClientid(Integer clientid) {
+	
+	public void setClientid(int clientid) {
 		this.clientid = clientid;
 	}
-
+	
 	public String getUsername() {
 		return username;
 	}
-
+	
 	public void setUsername(String username) {
 		this.username = username;
 	}
-
+	
 	public String getPassword() {
 		return password;
 	}
-
+	
 	public void setPassword(String password) {
 		this.password = password;
 	}
-
+	
 	public String getWechat_id() {
 		return wechat_id;
 	}
-
+	
 	public void setWechat_id(String wechat_id) {
 		this.wechat_id = wechat_id;
 	}
-
+	
 	public String getIcon() {
 		return icon;
 	}
-
+	
 	public void setIcon(String icon) {
 		this.icon = icon;
 	}
-
+	
 	public String getPhone() {
 		return phone;
 	}
-
+	
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
-
+	
 	public String getCreatedate() {
 		return createdate;
 	}
-
+	
 	public void setCreatedate(String createdate) {
 		this.createdate = createdate;
 	}
-
-	public Integer getType() {
+	
+	public int getType() {
 		return type;
 	}
-
-	public void setType(Integer type) {
+	
+	public void setType(int type) {
 		this.type = type;
 	}
-
-	public Integer getState() {
+	
+	public int getState() {
 		return state;
 	}
-
-	public void setState(Integer state) {
+	
+	public void setState(int state) {
 		this.state = state;
 	}
-
-	public Double getScores() {
+	
+	public double getScores() {
 		return scores;
 	}
-
-	public void setScores(Double scores) {
+	
+	public void setScores(double scores) {
 		this.scores = scores;
 	}
 }

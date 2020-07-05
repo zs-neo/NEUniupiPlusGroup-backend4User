@@ -6,9 +6,9 @@ import com.edu.neu.foodclient.service.CouponService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 @RestController
 @RequestMapping("/coupon")
@@ -18,9 +18,30 @@ public class CouponController {
     private CouponService couponService;
 
     @RequestMapping("/getAll")
-    public List<Coupon> getAll(){
-        return couponService.getAll();
+    public Object getAll() throws ParseException {
+        List<Coupon> coupons=couponService.getAll();
+        Map<String,Object> map = new HashMap<String, Object>();
+        SimpleDateFormat sdf  =new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        Date today = new Date();
+        List<Coupon> result=new ArrayList<>();
+        for(int i=0;i<coupons.size();i++){
+            Coupon coupon=coupons.get(i);
+            String endtime=coupon.getCouponendtime();
+            Date dateD = sdf.parse(endtime);
+            boolean flag = dateD.getTime() >= today.getTime();//判断拿到没有过期的优惠卷
+            if(flag&&(coupon.getCouponamount()>coupon.getCoupongetnum())){
+                result.add(coupon);
+            }
+        }
+        map.put("coupons",result);
+        return map;
     }
+
+
+
+
+
+
     @RequestMapping("/getAllByPage")
     public Object getAllByPage(@RequestParam("pageNum") int pageNum,
                                @RequestParam("pageSize") int pageSize) {

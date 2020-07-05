@@ -13,5 +13,4 @@ public interface FoodService {
     List<Food> getFoodByName(String fname);
     PageInfo<Food> getPageFood(int pageNum, int pageSize, int stid);
     Food getFoodByFid(int fid);
-    List<Food> getRecommendFood();
 }

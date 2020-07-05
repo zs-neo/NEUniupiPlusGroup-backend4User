@@ -5,12 +5,12 @@
 <mapper namespace="com.edu.neu.foodclient.mapper.RedPacketReceiveMapper">
 
   <select id="getByClientId" resultType="com.edu.neu.foodclient.entity.RedPacketReceive">
-    select * from redpacket_receive where clientid=#{clientid}
+    select * from redpacket_receive where clientid=#{clientid} and  createtime &gt;= (sysdate-7) and createtime &lt;= (sysdate)
   </select>
 
     <insert id="insert" parameterType="com.edu.neu.foodclient.entity.RedPacketReceive">
   	insert into redpacket_receive(id,clientid,rpid,createtime,status)
-    values((select max(id)+1 from redpacket_receive ),#{clientid},#{rpid},to_date(#{createtime},'yyyy-mm-dd hh24:mi:ss')
+    values((select nvl(max(id),0)+1 from redpacket_receive ),#{clientid},#{rpid},to_date(#{createtime},'yyyy-mm-dd hh24:mi:ss')
   	,0)
   </insert>
 

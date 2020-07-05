@@ -17,7 +17,7 @@ import java.util.UUID;
 @RequestMapping("/food")
 public class FoodController {
 
-    @Value("${upload.path}")
+    @Value("${lc.upload.path}")
     private String uploadPath;
 
     private String fileName;
@@ -97,10 +97,5 @@ public class FoodController {
     @RequestMapping("/getFoodByFid")
     public Food getFoodByFid(@RequestParam("fid") int fid){
         return foodService.getFoodByFid(fid);
-    }
-
-    @RequestMapping("/getRecommendFood")
-    public List<Food> getRecommendFood(){
-        return foodService.getRecommendFood();
     }
 }

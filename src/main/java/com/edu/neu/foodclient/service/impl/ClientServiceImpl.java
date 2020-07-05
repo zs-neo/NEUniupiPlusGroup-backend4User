@@ -11,9 +11,9 @@ import javax.annotation.Resource;
 @Service
 public class ClientServiceImpl implements ClientService {
     @Resource
-    private ClientMapper clientMapper;
+    ClientMapper clientMapper;
     @Resource
-    private MemberMapper memberMapper;
+    MemberMapper memberMapper;
     @Override
     public int updateClientInfo(Client client) {
         return clientMapper.updateClientInfo(client);

@@ -9,7 +9,7 @@ public class Member {
     private  String realname;
     private  String certificationdate;
     private  double accumulatescores;
-    private  int scores;
+
 
     public Member() {
     }
@@ -54,14 +54,6 @@ public class Member {
         this.accumulatescores = accumulatescores;
     }
 
-    public int getScores() {
-        return scores;
-    }
-
-    public void setScores(int scores) {
-        this.scores = scores;
-    }
-
     @Override
     public String toString() {
         return "Member{" +
@@ -70,7 +62,6 @@ public class Member {
                 ", realname='" + realname + '\'' +
                 ", certificationdate='" + certificationdate + '\'' +
                 ", accumulatescores=" + accumulatescores +
-                ", scores=" + scores +
                 '}';
     }
 }

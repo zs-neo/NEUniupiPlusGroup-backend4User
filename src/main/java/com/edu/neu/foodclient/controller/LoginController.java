@@ -13,9 +13,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.annotation.Resource;
-import javax.servlet.http.HttpSession;
-
 /**
  * @author zhousheng
  * @version 1.0
@@ -25,17 +22,15 @@ import javax.servlet.http.HttpSession;
 @RequestMapping("/user")
 public class LoginController {
 	
-	@Resource
+	@Autowired
 	private LoginService loginService;
 	
 	@RequestMapping("/login")
-	public Client login(String username, String password, HttpSession session) {
+	public Client login(String username, String password) {
 		System.out.println(username+password);
-		Client client = loginService.login(username, password);
-		session.setAttribute("user", client);
-		return client;
+		return loginService.login(username,password);
 	}
-
+	
 	@RequestMapping("/register")
 	public int register(@RequestBody Client client) {
 		return loginService.register(client);

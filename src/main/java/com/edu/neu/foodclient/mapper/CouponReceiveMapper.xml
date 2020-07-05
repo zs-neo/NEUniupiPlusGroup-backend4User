@@ -10,7 +10,7 @@
 
     <insert id="insert" parameterType="com.edu.neu.foodclient.entity.CouponReceive">
   	insert into coupon_receive(crid,clientid,couponid,createtime,status)
-    values((select max(crid)+1 from coupon_receive ),#{clientid},#{couponid},to_date(#{createtime},'yyyy-mm-dd hh24:mi:ss')
+    values((select nvl(max(crid),0)+1 from coupon_receive ),#{clientid},#{couponid},to_date(#{createtime},'yyyy-mm-dd hh24:mi:ss')
   	,0)
   </insert>
 
