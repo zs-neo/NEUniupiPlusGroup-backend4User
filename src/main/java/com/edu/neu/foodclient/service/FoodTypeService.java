@@ -9,4 +9,5 @@ public interface FoodTypeService {
     List<FirstType> getFirstTypeWithSecondType();
     List<FirstType> getFirstType();
     List<SecondType> getSecondTypeByFtid(int ftid);
+    SecondType getSecondTypeByStid(int stid);
 }

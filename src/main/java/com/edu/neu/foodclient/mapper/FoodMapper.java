@@ -20,4 +20,5 @@ public interface FoodMapper {
 
     @Select("select * from foods where fid=#{fid}")
     Food getFoodByFid(int fid);
-}
+    @Select("select * from foods where fid<100")
+    List<Food> getRecommendFood();}

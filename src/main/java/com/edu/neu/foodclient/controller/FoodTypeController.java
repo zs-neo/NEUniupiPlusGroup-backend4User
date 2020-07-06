@@ -44,6 +44,9 @@ public class FoodTypeController {
         return foodTypeService.getFirstTypeWithSecondType();
     }
 
-
+    @RequestMapping("/getSecondTypeByStid")
+    public SecondType getSecondTypeByStid(@RequestParam("stid") int stid){
+        return foodTypeService.getSecondTypeByStid(stid);
+    }
 
 }
