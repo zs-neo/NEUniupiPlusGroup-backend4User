@@ -45,9 +45,11 @@ public class FoodServiceImpl implements FoodService {
     public Food getFoodByFid(int fid) {
         return foodMapper.getFoodByFid(fid);
     }
+
     @Override
     public List<Food> getRecommendFood() {
         return foodMapper.getRecommendFood();
     }
+
 
 }

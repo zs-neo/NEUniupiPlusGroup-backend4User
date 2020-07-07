@@ -22,6 +22,7 @@ public interface FoodTypeMapper {
 
     })
     List<FirstType> getFirstTypeWithSecondType();
+
     @Select("select * from second_type where stid=#{stid}")
     SecondType getSecondTypeByStid(int stid);
 }

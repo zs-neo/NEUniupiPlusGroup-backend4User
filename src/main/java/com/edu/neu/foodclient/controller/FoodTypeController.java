@@ -49,4 +49,5 @@ public class FoodTypeController {
         return foodTypeService.getSecondTypeByStid(stid);
     }
 
+
 }
